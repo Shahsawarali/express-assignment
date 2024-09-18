@@ -25,6 +25,14 @@ app.post('/', (req, res) => {
     res.json({Message : 'item added',data : newItem})
 })
 
+app.put('/:Id', (req, res) => {
+    const newItem = req.body
+    const itemId = req.params.Id
+    res.json({Message : `updated item ${itemId}`,data : newItem})
+})
+
+
+
 app.listen(port, () => {
   console.log(`server is runing on port ${port}`)
 })
