@@ -11,6 +11,10 @@ app.get("/about", (req, res) => {
     res.json({Message : 'about page'})
 })
 
+app.get("/contact us", (req, res) => {
+    res.json({Message : 'contact us page'})
+})
+
 app.listen(port, () => {
   console.log(`server is runing on port ${port}`)
 })
