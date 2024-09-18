@@ -31,6 +31,10 @@ app.put('/:Id', (req, res) => {
     res.json({Message : `updated item ${itemId}`,data : newItem})
 })
 
+app.delete('/:Id', (req, res) => {
+    const itemId = req.params.Id
+    res.json({Message : `delete item ${itemId}`})
+})
 
 
 app.listen(port, () => {
