@@ -15,6 +15,11 @@ app.get("/contact us", (req, res) => {
     res.json({Message : 'contact us page'})
 })
 
+app.get('/get', (req, res) => {
+    const newItem = req.body
+    res.json({Message : 'GET request - Fetching all items',data : newItem})
+})
+
 app.listen(port, () => {
   console.log(`server is runing on port ${port}`)
 })
